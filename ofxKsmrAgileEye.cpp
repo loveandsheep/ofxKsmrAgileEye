@@ -48,13 +48,7 @@ void ofxKsmrAgileEye::update(const ofVec3f & pos){
 	targetNode.setGlobalPosition(tc + ps);
 
 	trail.push_back(tc + ps);
-	while (trail.size() > 100) trail.erase(trail.begin());
-
-	if (ofGetFrameNum() % 15 == 0){
-//		targetNode.setGlobalPosition(tc + ofVec3f(ofRandomf()*200,
-//												  ofRandomf()*200,
-//												  ofRandomf()*200));
-	}
+	while (trail.size() > 500) trail.erase(trail.begin());
 
 	targSmooth += (targetNode.getGlobalPosition() - targSmooth) / 4.0;
 	eye.center.lookAt(targetNode);
@@ -163,6 +157,7 @@ void ofxKsmrAgileEye::draw(){
 
 	ofPushMatrix();
 	ofTranslate(-200, -200, 200);
+	ofRotateY(-45);
 	ofLine(-10, 0, 10, 0);
 	ofLine(0, -10, 0, 10);
 	ofPopMatrix();
@@ -275,4 +270,5 @@ void singleArm::draw(){
 	glDisableClientState(GL_VERTEX_ARRAY);
 	ofPopStyle();
 	ofPopMatrix();
+	
 }
