@@ -263,9 +263,9 @@ void singleArm::draw(){
 	glDrawArrays(GL_TRIANGLES, 0, verts.size());
 
 	ofSetColor(100);
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-	glDrawArrays(GL_TRIANGLES, 0, verts.size());
-	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+//	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+//	glDrawArrays(GL_TRIANGLES, 0, verts.size());
+//	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
 	glDisableClientState(GL_VERTEX_ARRAY);
 	ofPopStyle();
