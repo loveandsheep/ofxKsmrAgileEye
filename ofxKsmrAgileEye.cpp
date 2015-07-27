@@ -161,10 +161,10 @@ void ofxKsmrAgileEye::draw(){
 	ofLine(-10, 0, 10, 0);
 	ofLine(0, -10, 0, 10);
 	ofPopMatrix();
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glVertexPointer(3, GL_FLOAT, 0, &trail[0]);
-	glDrawArrays(GL_LINE_STRIP, 0, trail.size());
-	glDisableClientState(GL_VERTEX_ARRAY);
+//	glEnableClientState(GL_VERTEX_ARRAY);
+//	glVertexPointer(3, GL_FLOAT, 0, &trail[0]);
+//	glDrawArrays(GL_LINE_STRIP, 0, trail.size());
+//	glDisableClientState(GL_VERTEX_ARRAY);
 
 	ofSetColor(255);
 
